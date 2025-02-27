@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    <a href="{{ url_for('add_expense') }}">Add Expense</a> | 
+    <a href="{{ url_for('analyze') }}">Analyze Expenses</a>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>{{ Name}}</td>
+                <td>{{ amount }}</td>
+                <td>{{date }}</td>
+            </tr>
+    
+        </tbody>
+    </table>
+</body>
+</html>
